@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class Stream extends React.Component {
   constructor() {
@@ -26,4 +27,11 @@ class Stream extends React.Component {
   }
 }
 
-export default Stream;
+function mapStateToProps(state) {
+  const tracks = state.track;
+  return {
+    tracks
+  }
+}
+
+export default connect(mapStateToProps)(Stream);
