@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+}
+
+h1, h2,h3,h4p {
+  color: #282f44;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: #222;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  flex: 0 0 80px;
+  /*background-color: #ececec;*/
+  padding: 10px;
+  text-align: center;
+}
+
+header > p {
+  color: #e6af2e;
+}
+
+main {
+  flex: 1 0 auto; /* fill the available space */
+}
+
+footer {
+  flex: 0 0 40px; /* don’t grow or shrink - just stay at a height of 90px. */ 
+  padding: 10px;
+  border-top: 1px solid #ececec;
+  /*background-color: #282f44;*/
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer ul > li {
+  color: #282f44;
+  padding-right: 6px;
+}
+
+footer li:after {
+    content: " |";
+}
+footer li:last-child:after {
+    content: "";
+}
