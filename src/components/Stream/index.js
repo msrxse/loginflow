@@ -5,8 +5,8 @@ import Stream from './presenter';
 function mapStateToProps(state) {
   const tracks = state.track;
   return {
-    tracks
-  }
+    tracks,
+  };
 }
 
 export default connect(mapStateToProps)(Stream);

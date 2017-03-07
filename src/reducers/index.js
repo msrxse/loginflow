@@ -4,5 +4,5 @@ import track from './track';
 
 export default combineReducers({
   track,
-  routing: routerReducer
+  routing: routerReducer,
 });

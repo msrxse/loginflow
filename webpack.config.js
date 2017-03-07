@@ -1,13 +1,38 @@
+const webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './src/index.js'
   ],
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        eslint: {
+          configFile: path.join(__dirname, './.eslintrc')
+        },
+        postcss: () => {
+          return [autoprefixer];
+        }
+      }
+    })
+  ],
+
   module: {
     rules: [
       {
-        test: /\.js$/,
+        enforce: 'pre',
+        test: /\.jsx?$/, // both .js and .jsx
+        loader: 'eslint-loader',
+        include: path.resolve(process.cwd(), 'src'),
+        options: {
+          fix: true,
+        },
+      },
+      {
+        test: /\.jsx?$/,
         exclude: [/node_modules/],
         use: [{
           loader: 'babel-loader',

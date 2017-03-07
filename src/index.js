@@ -10,11 +10,11 @@ import Stream from './components/Stream';
 
 const tracks = [
   {
-    title: 'Some track'
+    title: 'Some track',
   },
   {
-    title: 'Some other track'
-  }
+    title: 'Some other track',
+  },
 ];
 
 const store = configureStore();
@@ -31,7 +31,7 @@ ReactDOM.render(
       </Route>
     </Router>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
 
 // module.hot.accept();
