@@ -3,7 +3,7 @@ import styles from '../App.css';
 
 const Header = () =>
   <header className={styles.header}>
-    <p>ThisHeader</p>
+    <p>TITLE</p>
   </header>;
 
 export default Header;

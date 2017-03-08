@@ -20,10 +20,10 @@ body {
 }
 
 header {
-  flex: 0 0 80px;
-  /*background-color: #ececec;*/
-  padding: 10px;
-  text-align: center;
+  flex: 0 0 40px;
+  border-bottom: 1px solid #ececec;
+  padding: 20px;
+  text-align: left;
 }
 
 header > p {
@@ -32,15 +32,17 @@ header > p {
 
 main {
   flex: 1 0 auto; /* fill the available space */
+  padding: 20px;
 }
 
 footer {
   flex: 0 0 40px; /* don’t grow or shrink - just stay at a height of 90px. */ 
-  padding: 10px;
+  padding: 20px;
   border-top: 1px solid #ececec;
   /*background-color: #282f44;*/
 }
 footer ul {
+  padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;

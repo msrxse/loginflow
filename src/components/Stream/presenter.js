@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 
 function Stream({ tracks = [] }) {
@@ -9,5 +10,9 @@ function Stream({ tracks = [] }) {
     </div>
   );
 }
+
+Stream.propTypes = {
+  tracks: React.PropTypes.node.isRequired,
+};
 
 export default Stream;
