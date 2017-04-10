@@ -1,9 +1,20 @@
-# minimal-react-boilerplate
-Minimal react boilerplate - babel/webpack2
+# Adding Login and Authentication Sections to a React app
+
 ## Installation
 TODO: Describe the installation process
-## Usage
-TODO: Write usage instructions
+
+## Getting started
+
+### Install dependencies
+
+Execute `npm install` to install all dependencies.
+
+### Development environment
+
+#### Start the app
+
+Execute `npm run start` to run the development server on **[http://localhost:8080](http://localhost:8080)**.
+
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
