@@ -1,9 +1,7 @@
 # Adding Login and Authentication Sections to a React app
 
-## Installation
-TODO: Describe the installation process
-
-## Getting started
+Boilerplate by
+  - [jmarcosuarez/minimal-react-boilerplate](https://github.com/jmarcosuarez/minimal-react-boilerplate)
 
 ### Install dependencies
 
