@@ -11,11 +11,11 @@ Execute `npm install` to install all dependencies.
 
 #### Start the app
 
-Execute `npm run start` to run the development server on **[http://localhost:8080](http://localhost:8080)**.
+Execute `npm start` to run the development server on **[http://localhost:8080](http://localhost:8080)**.
 
 ## Latest TODO!
 
-First we are going to do is create a Navigation bar on top, funtinality would be different for login and not logged in users. Nav files inside App folder, Stream folder becomes Pages, where all views of the app will be implemented.
+First we are going to do is create a Navigation bar on top, functionality would be different for login and not logged in users. Nav files inside App folder and Stream folder becomes Pages, where all views of the app will be implemented.
 
 ## Contributing
 1. Fork it!

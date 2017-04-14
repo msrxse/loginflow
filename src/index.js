@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import configureStore from './stores/configureStore';
 import * as actions from './actions';
 import App from './components/App';
-import Stream from './components/Stream';
+import HomePage from './components/Pages/HomePage';
 
 const tracks = [
   {
@@ -27,8 +27,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={Stream} />
-        <Route path="/" component={Stream} />
+        <IndexRoute component={HomePage} />
+        <Route path="/" component={HomePage} />
       </Route>
     </Router>
   </Provider>,
