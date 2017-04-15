@@ -8,6 +8,8 @@ import configureStore from './stores/configureStore';
 import * as actions from './actions';
 import App from './components/App';
 import HomePage from './components/Pages/HomePage';
+import RegisterPage from './components/Pages/RegisterPage';
+import LoginPage from './components/Pages/LoginPage';
 
 const tracks = [
   {
@@ -29,6 +31,8 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
         <Route path="/" component={HomePage} />
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/login" component={LoginPage} />
       </Route>
     </Router>
   </Provider>,
