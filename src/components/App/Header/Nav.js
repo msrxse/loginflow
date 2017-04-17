@@ -22,13 +22,14 @@ class Nav extends Component {
         {this.props.currentlySending ? (
           <LoadingButton className="btn--nav" />
         ) : (
-          <a href="#" className="btn btn--login btn--nav" onClick={this.logout}>Logout</a>
+          <a href="#" className="btn btn-default" onClick={this.logout}>Logout</a>
         )}
       </div>
     ) : (
       <div>
-        <Link to="/register" className="btn btn--login btn--nav">Register</Link>
-        <Link to="/login" className="btn btn--login btn--nav">Login</Link>
+        <p className="text-primary">ola ke ase</p>
+        <Link to="/register" className="btn btn-default">Register</Link>
+        <Link to="/login" className="btn btn-default">Login</Link>
       </div>
     );
 

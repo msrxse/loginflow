@@ -26,7 +26,7 @@ class RegisterPage extends Component {
       <div>
         <button
           onClick={() => this.registerMe(user)}
-        ><h4>Register <i className="fa fa-child" aria-hidden="true" /></h4>
+        ><h4>Register <i className="glyphicon glyphicon-ok" aria-hidden="true" /></h4>
         </button>
       </div>
     );
