@@ -16,7 +16,8 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 - - - -
 
 ## Latest TASKS!
-- [ ] TODO n3: Set styles on the Navigation menu. Refactor views using the new loggedIn variable.
+- [ ] TODO n4: Refactor views using the new loggedIn variable.
+- [x] TODO n3: Set styles on the Navigation menu.
 - [x] TODO n2: Hook this.props.loggedIn in store so clicking login button sets this variable true. This is the previous step that will permit toggling whats seen on the views depending on loggin status.
 - [x] TODO n1: First we are going to do is create a Navigation bar on top, functionality would be different for login and not logged in users. Nav files inside Header folder and Stream folder becomes Pages, where all views of the app will be implemented.
 

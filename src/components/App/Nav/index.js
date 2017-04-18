@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 // import { logout } from '../actions/AppActions';
 import LoadingButton from './LoadingButton';
-import styles from './Nav.css';
+import styles from './nav.css';
 
 class Nav extends Component {
   // logout() {
@@ -28,17 +28,24 @@ class Nav extends Component {
       </div>
     ) : (
       <div>
+
         <Link to="/register" className="btn btn--login btn--nav">Register</Link>
+
         <Link to="/login" className="btn btn-primary">Login</Link>
+
       </div>
     );
 
     return (
       <div className={styles.nav}>
-        <div className="wrapper">
-          <Link to="/" className="nav__logo-wrapper"><h2 className="nav__logo">Login&nbsp;Flow</h2></Link>
-          { navButtons }
-        </div>
+        <ul className="menu">
+          <li>
+            <Link to="/" className="logo"><h2 className="text_logo">Login&nbsp;Flow</h2></Link>
+          </li>
+          <li>
+            { navButtons }
+          </li>
+        </ul>
       </div>
     );
   }
