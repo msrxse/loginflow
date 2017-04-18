@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 // import { logout } from '../actions/AppActions';
 import LoadingButton from './LoadingButton';
+import styles from './Nav.css';
 
 class Nav extends Component {
   // logout() {
@@ -27,15 +28,15 @@ class Nav extends Component {
       </div>
     ) : (
       <div>
-        <p className="text-primary">ola ke ase</p>
-        <Link to="/register" className="btn btn-default">Register</Link>
-        <Link to="/login" className="btn btn-default">Login</Link>
+        <Link to="/" className="nav__logo-wrapper"><h2 className="nav__logo">Login&nbsp;Flow</h2></Link>
+        <Link to="/register" className="btn btn-primary">Register</Link>
+        <Link to="/login" className="btn btn-primary">Login</Link>
       </div>
     );
 
     return (
-      <div className="nav">
-        <div className="nav__wrapper">
+      <div className={styles.nav}>
+        <div className="wrapper">
 
           { navButtons }
         </div>
