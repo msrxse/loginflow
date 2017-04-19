@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Nav from './Nav';
 import Footer from './Footer';
 
@@ -21,7 +22,7 @@ function App({ children }) {
 }
 
 App.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default App;

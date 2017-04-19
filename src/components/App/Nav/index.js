@@ -5,6 +5,8 @@
  */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
 // import { logout } from '../actions/AppActions';
 import LoadingButton from './LoadingButton';
@@ -23,7 +25,7 @@ class Nav extends Component {
         {this.props.currentlySending ? (
           <LoadingButton className="btn--nav" />
         ) : (
-          <a href="#" className="btn btn-default" onClick={this.logout}>Logout</a>
+          <button className="btn btn-default" onClick={this.logout}>Logout</button>
         )}
       </div>
     ) : (
@@ -51,9 +53,21 @@ class Nav extends Component {
   }
 }
 
-// Nav.propTypes = {
-//   loggedIn: React.PropTypes.bool.isRequired,
-//   currentlySending: React.PropTypes.bool.isRequired,
-// };
+Nav.propTypes = {
+  loggedIn: PropTypes.bool,
+  currentlySending: PropTypes.bool,
+};
 
-export default Nav;
+Nav.defaultProps = {
+  loggedIn: false,
+  currentlySending: false,
+};
+
+function mapStateToProps(state) {
+  const { loggedIn } = state.user;
+  return {
+    loggedIn,
+  };
+}
+
+export default connect(mapStateToProps)(Nav);

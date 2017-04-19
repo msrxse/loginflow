@@ -4,14 +4,23 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import LoadingIndicator from './LoadingIndicator';
 
 function LoadingButton(props) {
   return (
-    <a href="#" className={`${props.className} btn btn--loading`} disabled="true">
+    <button className={`${props.className} btn btn--loading`} disabled="true">
       <LoadingIndicator />
-    </a>
+    </button>
   );
 }
+
+LoadingButton.propTypes = {
+  className: PropTypes.bool,
+};
+
+LoadingButton.defaultProps = {
+  className: '',
+};
 
 export default LoadingButton;

@@ -7,14 +7,15 @@
  */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import * as registerActions from '../../actions/register';
+// import * as registerActions from '../../actions/register';
 
 class RegisterPage extends Component {
   // Register a user
-  registerMe(user) {
-    this.props.dispatch(registerActions.register(user));
-  }
+  // registerMe(user) {
+  //   // this.props.dispatch(registerActions.register(user));
+  // }
   render() {
     const user = { username: 'John', password: 'admin' };
     // const { loggedIn } = this.props.user;
@@ -37,6 +38,14 @@ class RegisterPage extends Component {
     );
   }
 }
+
+RegisterPage.propTypes = {
+  loggedIn: PropTypes.bool,
+};
+
+RegisterPage.defaultProps = {
+  loggedIn: false,
+};
 
 // Which props do we want to inject, given the global state?
 function mapStateToProps(state) {
