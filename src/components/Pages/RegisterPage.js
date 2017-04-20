@@ -49,7 +49,7 @@ RegisterPage.defaultProps = {
 
 // Which props do we want to inject, given the global state?
 function mapStateToProps(state) {
-  const { user, loggedIn } = state.user;
+  const { user, loggedIn } = state.data;
   return {
     user, loggedIn,
   };

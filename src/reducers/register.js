@@ -1,19 +1,26 @@
 import * as actionTypes from '../constants/actionTypes';
 
-const initialState = [];
+// The initial application state
+const initialState = {
+  formState: {
+    username: '',
+    password: '',
+  },
+  currentlySending: false,
+  loggedIn: false,
+};
 
-function setMe(state, action) {
-  const { user } = action;
+function setAuth(state, action) {
+  const { newState } = action;
   return Object.assign({}, state, {
-    user,
-    loggedIn: true,
+    loggedIn: newState,
   });
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case actionTypes.ME_SET:
-      return setMe(state, action);
+    case actionTypes.SET_AUTH:
+      return setAuth(state, action);
     default:
       return state;
   }

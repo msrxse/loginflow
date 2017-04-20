@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 // import { logout } from '../actions/AppActions';
-import LoadingButton from './LoadingButton';
+import LoadingButton from '../../Pages/components/LoadingButton';
 import styles from './nav.css';
 
 class Nav extends Component {
@@ -64,7 +64,7 @@ Nav.defaultProps = {
 };
 
 function mapStateToProps(state) {
-  const { loggedIn } = state.user;
+  const { loggedIn } = state.data;
   return {
     loggedIn,
   };
