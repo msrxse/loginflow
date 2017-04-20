@@ -16,7 +16,10 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 - - - -
 
 ## Latest TASKS!
-- [ ] TODO n4: Implement views for LoginPage and RegisterPage.
+- [ ] TODO n4: Implement views for RegisterPage.
+- [ ] TODO n4: Move scss files to its own folder.
+- [ ] TODO n4: FIX: SyntaxError: Missing class properties transform. I need to use arrow functions within the body of classes. Note that babel-plugin-transform-class-properties is installed. Just need to figure out how to add "plugins": ["transform-class-properties"] within webpack2.
+- [x] TODO n4: Implement views for LoginPage.
 - [x] TODO n3: Set styles on the Navigation menu.
 - [x] TODO n2: Hook this.props.loggedIn in store so clicking login button sets this variable true. This is the previous step that will permit toggling whats seen on the views depending on loggin status.
 - [x] TODO n1: First we are going to do is create a Navigation bar on top, functionality would be different for login and not logged in users. Nav files inside Header folder and Stream folder becomes Pages, where all views of the app will be implemented.
