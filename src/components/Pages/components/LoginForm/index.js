@@ -4,7 +4,6 @@
  */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import LoginFormLabel from './LoginFormLabel';
 import styles from './form.scss'; // This injects all styles globally!
 
