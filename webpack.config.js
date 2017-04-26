@@ -1,5 +1,7 @@
 const webpack = require('webpack');
-var path = require('path');
+const path = require('path');
+
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
@@ -36,7 +38,6 @@ module.exports = {
         exclude: [/node_modules/],
         use: [{
           loader: 'babel-loader',
-          options: { presets: ['es2015'] },
         }],
       },
       {

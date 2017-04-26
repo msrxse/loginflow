@@ -18,7 +18,6 @@ class LoginForm extends Component {
       message: '',
     };
   }
-// I have installed transform-class-properties but this still doesn't work
 
   handleChange = (e) => {
     const newState = {};
@@ -48,7 +47,7 @@ class LoginForm extends Component {
 //       subject: '',
 //       message: '',
 //     });
-//   };
+  };
 
   render() {
     return (
