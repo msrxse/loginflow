@@ -20,20 +20,20 @@ class LoginForm extends Component {
   }
 // I have installed transform-class-properties but this still doesn't work
 
-  // handleChange = (e) => {
-  //   const newState = {};
-  //   newState[e.target.name] = e.target.value;
-  //   this.setState(newState);
-  // };
+  handleChange = (e) => {
+    const newState = {};
+    newState[e.target.name] = e.target.value;
+    this.setState(newState);
+  };
 
-//   handleSubmit = (e, message) => {
-//     e.preventDefault();
-//     const formData = {
-//       formSender: this.state.name,
-//       formEmail: this.state.email,
-//       formSubject: this.state.subject,
-//       formMessage: this.state.message,
-//     };
+  handleSubmit = (e, message) => {
+    e.preventDefault();
+    const formData = {
+      formSender: this.state.name,
+      formEmail: this.state.email,
+      formSubject: this.state.subject,
+      formMessage: this.state.message,
+    };
 
 //     if (formData.formSender.length < 1 || formData.formEmail.length < 1 || formData.formSubject.length < 1 || formData.formMessage.length < 1) {
 //       return false;
