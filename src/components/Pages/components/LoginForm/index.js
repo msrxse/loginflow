@@ -51,7 +51,7 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <form className="react-form" onSubmit={this.handleSubmit}>
+      <form className={styles.reactForm} onSubmit={this.handleSubmit}>
         <h1>Say Hi!</h1>
 
         <fieldset className="form-group">
@@ -79,7 +79,7 @@ class LoginForm extends Component {
         </fieldset>
 
         <div className="form-group">
-          <input id="formButton" className="btn" type="submit" placeholder="Send message" />
+          <input id="formButton" className={styles.btn} type="submit" placeholder="Send message" />
         </div>
       </form>
     );

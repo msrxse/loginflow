@@ -41,24 +41,13 @@ module.exports = {
         }],
       },
       {
-        test: /\.css$/,
-        use: [
+        test: /\.s?css$/,
+        loaders: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: { modules: true },
-          },
-        ],
-      },
-      {
-        test: /\.(sass|scss)$/,
-        use: [
-          'style-loader',
-          'css-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
           'sass-loader',
         ],
       },
-
       // Loaders for other file types can go here
 
     ],
