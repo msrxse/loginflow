@@ -10,6 +10,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // import * as registerActions from '../../actions/register';
+import Form from './components/form/RegisterForm';
 
 class RegisterPage extends Component {
   // Register a user
@@ -17,7 +18,7 @@ class RegisterPage extends Component {
   //   // this.props.dispatch(registerActions.register(user));
   // }
   render() {
-    const user = { username: 'John', password: 'admin' };
+    // const user = { username: 'John', password: 'admin' };
     // const { loggedIn } = this.props.user;
     const regButtons = this.props.loggedIn ? (
       <div>
@@ -25,10 +26,11 @@ class RegisterPage extends Component {
       </div>
     ) : (
       <div>
-        <button
+        {/* <button
           onClick={() => this.registerMe(user)}
         ><h4>Register <i className="glyphicon glyphicon-ok" aria-hidden="true" /></h4>
-        </button>
+        </button> */}
+        <Form />
       </div>
     );
     return (

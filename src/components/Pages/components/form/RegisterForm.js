@@ -4,18 +4,16 @@
  */
 
 import React, { Component } from 'react';
-import LoginFormLabel from './LoginFormLabel';
+import FormLabel from './FormLabel';
 import styles from './form.scss'; // This injects all styles globally!
 
-class LoginForm extends Component {
+class RegisterForm extends Component {
   constructor() {
     super();
 
     this.state = {
       name: '',
       email: '',
-      subject: '',
-      message: '',
     };
   }
 
@@ -30,8 +28,6 @@ class LoginForm extends Component {
     const formData = {
       formSender: this.state.name,
       formEmail: this.state.email,
-      formSubject: this.state.subject,
-      formMessage: this.state.message,
     };
 
 //     if (formData.formSender.length < 1 || formData.formEmail.length < 1 || formData.formSubject.length < 1 || formData.formMessage.length < 1) {
@@ -52,30 +48,34 @@ class LoginForm extends Component {
   render() {
     return (
       <form className={styles.reactForm} onSubmit={this.handleSubmit}>
-        <h1>Say Hi!</h1>
+        <h1>Register Form</h1>
 
         <fieldset className="form-group">
-          <LoginFormLabel htmlFor="formName" title="Full Name:" />
+          <FormLabel htmlFor="formName" title="Full Name:" />
 
-          <input id="formName" className="form-input" name="name" type="text" required onChange={this.handleChange} value={this.state.name} />
+          <input
+            id="formName"
+            className="form-input"
+            name="name"
+            type="text"
+            required
+            onChange={this.handleChange}
+            value={this.state.name}
+          />
         </fieldset>
 
         <fieldset className="form-group">
-          <LoginFormLabel htmlFor="formEmail" title="Email:" />
+          <FormLabel htmlFor="formEmail" title="Email:" />
 
-          <input id="formEmail" className="form-input" name="email" type="email" required onChange={this.handleChange} value={this.state.email} />
-        </fieldset>
-
-        <fieldset className="form-group">
-          <LoginFormLabel htmlFor="formSubject" title="Subject:" />
-
-          <input id="formSubject" className="form-input" name="subject" type="text" required onChange={this.handleChange} value={this.state.subject} />
-        </fieldset>
-
-        <fieldset className="form-group">
-          <LoginFormLabel htmlFor="formMessage" title="Message:" />
-
-          <textarea id="formMessage" className="form-textarea" name="message" required onChange={this.handleChange} />
+          <input
+            id="formEmail"
+            className="form-input"
+            name="email"
+            type="email"
+            required
+            onChange={this.handleChange}
+            value={this.state.email}
+          />
         </fieldset>
 
         <div className="form-group">
@@ -86,4 +86,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export default RegisterForm;

@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class LoginFormLabel extends Component {
+class FormLabel extends Component {
   render() {
     return (
       <label htmlFor={this.props.htmlFor}>{this.props.title}</label>
@@ -14,14 +14,14 @@ class LoginFormLabel extends Component {
   }
 }
 
-LoginFormLabel.propTypes = {
+FormLabel.propTypes = {
   title: PropTypes.string,
   htmlFor: PropTypes.string,
 };
 
-LoginFormLabel.defaultProps = {
+FormLabel.defaultProps = {
   title: '',
   htmlFor: '',
 };
 
-export default LoginFormLabel;
+export default FormLabel;

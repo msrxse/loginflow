@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // import Form from './components/Form';
-import Form from './components/LoginForm';
+import Form from './components/form/LoginForm';
 // import auth from '../../utils/auth';
 // import { login } from '../../actions/AppActions';
 // import LoadingIndicator from '../LoadingIndicator.react';
