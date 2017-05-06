@@ -16,7 +16,9 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 - - - -
 
 ## Latest TASKS!
-- [ ] TODO n8: Implement actual loggin in/out toggle (mock-up).
+- [ ] TODO n9: Implement actual loggin in/out toggle (mock-up).
+- [x] TODO n9: Change RegisterForm to use controlled form fields.
+- [x] TODO n8: Change LogginForm to use controlled form fields.
 - [x] TODO n7: Implement views for RegisterPage.
 - [x] TODO n6: Move scss files to its own folder.
 - [x] TODO n5: FIX: SyntaxError: Missing class properties transform. I need to use arrow functions within the body of classes. Note that babel-plugin-transform-class-properties is installed. Just need to figure out how to add "plugins": ["transform-class-properties"] within webpack2.

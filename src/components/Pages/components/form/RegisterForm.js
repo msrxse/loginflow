@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 import FormLabel from './FormLabel';
-import styles from './form.scss'; // This injects all styles globally!
+import styles from './form.scss';
 
 class RegisterForm extends Component {
   constructor() {

@@ -5,17 +5,15 @@
 
 import React, { Component } from 'react';
 import FormLabel from './FormLabel';
-import styles from './form.scss'; // This injects all styles globally!
+import styles from './form.scss';
 
 class LoginForm extends Component {
   constructor() {
     super();
 
     this.state = {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+      username: '',
+      password: '',
     };
   }
 
@@ -28,25 +26,21 @@ class LoginForm extends Component {
   handleSubmit = (e, message) => {
     e.preventDefault();
     const formData = {
-      formSender: this.state.name,
-      formEmail: this.state.email,
-      formSubject: this.state.subject,
-      formMessage: this.state.message,
+      formUsername: this.state.username,
+      formPassword: this.state.password,
     };
 
-//     if (formData.formSender.length < 1 || formData.formEmail.length < 1 || formData.formSubject.length < 1 || formData.formMessage.length < 1) {
-//       return false;
-//     }
+    if (formData.formUsername.length < 1 || formData.formPassword.length < 1) {
+      return false;
+    }
 
-// // Dispatch action SET_AUTH
-// //  Clear form
-//     this.setState({
-//       firstName: '',
-//       lastName: '',
-//       email: '',
-//       subject: '',
-//       message: '',
-//     });
+// Dispatch action SET_AUTHs
+    console.log('dispatching action to set auth');
+//  Then, Clear form
+    this.setState({
+      username: '',
+      password: '',
+    });
   };
 
   render() {
@@ -55,34 +49,35 @@ class LoginForm extends Component {
         <h1>Login Form</h1>
 
         <fieldset className="form-group">
-          <FormLabel htmlFor="formName" title="Full Name:" />
+          <FormLabel htmlFor="formUsername" title="Full Name:" />
 
           <input
-            id="formName"
+            id="formUsername"
             className="form-input"
-            name="name" type="text"
+            name="username"
+            type="text"
             required
             onChange={this.handleChange}
-            value={this.state.name}
+            value={this.state.username}
           />
         </fieldset>
 
         <fieldset className="form-group">
-          <FormLabel htmlFor="formSubject" title="Subject:" />
+          <FormLabel htmlFor="formPassword" title="Password:" />
 
           <input
-            id="formSubject"
+            id="formPassword"
             className="form-input"
-            name="subject"
+            name="password"
             type="text"
             required
             onChange={this.handleChange}
-            value={this.state.subject}
+            value={this.state.password}
           />
         </fieldset>
 
         <div className="form-group">
-          <input id="formButton" className={styles.btn} type="submit" placeholder="Send message" />
+          <input id="formButton" className={styles.btn} type="submit" placeholder="Log In" />
         </div>
       </form>
     );
