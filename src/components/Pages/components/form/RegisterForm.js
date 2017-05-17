@@ -23,26 +23,25 @@ class RegisterForm extends Component {
     this.setState(newState);
   };
 
-  handleSubmit = (e, message) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
       formSender: this.state.name,
       formEmail: this.state.email,
     };
 
-//     if (formData.formSender.length < 1 || formData.formEmail.length < 1 || formData.formSubject.length < 1 || formData.formMessage.length < 1) {
-//       return false;
-//     }
+    // if (formData.formSender.length < 1 || formData.formEmail.length < 1) {
+    //   return false;
+    // }
 
-// // Dispatch action SET_AUTH
-// //  Clear form
-//     this.setState({
-//       firstName: '',
-//       lastName: '',
-//       email: '',
-//       subject: '',
-//       message: '',
-//     });
+// Dispatch action SET_AUTH
+    this.props.registerUser();
+
+//  Clear form
+    this.setState({
+      name: '',
+      email: '',
+    });
   };
 
   render() {

@@ -23,7 +23,7 @@ class LoginForm extends Component {
     this.setState(newState);
   };
 
-  handleSubmit = (e, message) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
       formUsername: this.state.username,

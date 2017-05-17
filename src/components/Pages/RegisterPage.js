@@ -9,14 +9,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import * as registerActions from '../../actions/register';
+import { bindActionCreators } from 'redux';
+import * as registerActions from '../../actions/register';
 import Form from './components/form/RegisterForm';
 
 class RegisterPage extends Component {
-  // Register a user
-  // registerMe(user) {
-  //   // this.props.dispatch(registerActions.register(user));
-  // }
   render() {
     // const user = { username: 'John', password: 'admin' };
     // const { loggedIn } = this.props.user;
@@ -30,7 +27,9 @@ class RegisterPage extends Component {
           onClick={() => this.registerMe(user)}
         ><h4>Register <i className="glyphicon glyphicon-ok" aria-hidden="true" /></h4>
         </button> */}
-        <Form />
+        <Form
+          registerUser={this.props.registerUser}
+        />
       </div>
     );
     return (
@@ -43,11 +42,19 @@ class RegisterPage extends Component {
 
 RegisterPage.propTypes = {
   loggedIn: PropTypes.bool,
+  registerUser: PropTypes.func,
 };
 
 RegisterPage.defaultProps = {
   loggedIn: false,
+  registerUser: false,
 };
+
+function mapDispatchToProps(dispatch) {
+  return {
+    registerUser: bindActionCreators(registerActions.register, dispatch),
+  };
+}
 
 // Which props do we want to inject, given the global state?
 function mapStateToProps(state) {
@@ -57,5 +64,5 @@ function mapStateToProps(state) {
   };
 }
 
-// Wrap the component to inject dispatch and state into it
-export default connect(mapStateToProps)(RegisterPage);
+// Wrap the component to inject dispatch and state/actions into it
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterPage);

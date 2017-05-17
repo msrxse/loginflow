@@ -21,11 +21,19 @@ function anyElementsEmpty(elements) {
 function setAuthState(newState) {
   return { type: actionTypes.SET_AUTH, newState };
 }
+
 /**
- * Registers User
+ * Logs an user in
  * @param  {string} username The username of the user to be logged in
  * @param  {string} password The password of the user to be logged in
  */
-export function register(username, password) {
-  console.log('register function called in register action creator file');
+export function login(username, password) {
+  return (dispatch) => {
+    // If no username or password was specified, throw a field-missing error
+    if (anyElementsEmpty({ username, password })) {
+      console.log('Field missing found', 'Validation continues signaling failures on Form!');
+    }
+    const success = true; /* Simulates we obtain a successfull loggin of an user */
+    dispatch(setAuthState(success));
+  };
 }
