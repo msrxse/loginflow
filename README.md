@@ -16,7 +16,8 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 - - - -
 
 ## Latest TASKS!
-- [ ] TODO n9: Implement actual loggin in/out toggle (mock-up).
+- [ ] TODO n10: Finish implementing loggin in/out toggle (mock-up).
+- [ ] TODO n9: Sending register form triggers action.
 - [x] TODO n8: Change forms to use controlled form fields.
 - [x] TODO n7: Implement views for RegisterPage.
 - [x] TODO n6: Move scss files to its own folder.
