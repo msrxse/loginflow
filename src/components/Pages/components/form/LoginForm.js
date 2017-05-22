@@ -35,7 +35,7 @@ class LoginForm extends Component {
     }
 
 // Dispatch action SET_AUTHs
-    console.log('dispatching action to set auth');
+    this.props.loginUser();
 //  Then, Clear form
     this.setState({
       username: '',

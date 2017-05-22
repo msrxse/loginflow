@@ -28,12 +28,13 @@ function setAuthState(newState) {
  * @param  {string} password The password of the user to be logged in
  */
 export function login(username, password) {
-  return (dispatch) => {
-    // If no username or password was specified, throw a field-missing error
-    if (anyElementsEmpty({ username, password })) {
-      console.log('Field missing found', 'Validation continues signaling failures on Form!');
-    }
-    const success = true; /* Simulates we obtain a successfull loggin of an user */
-    dispatch(setAuthState(success));
-  };
+  console.log('login function called in login action creator');
+  // return (dispatch) => {
+  //   // If no username or password was specified, throw a field-missing error
+  //   if (anyElementsEmpty({ username, password })) {
+  //     console.log('Field missing found', 'Validation continues signaling failures on Form!');
+  //   }
+  //   const success = true; /* Simulates we obtain a successfull loggin of an user */
+  //   dispatch(setAuthState(success));
+  // };
 }
