@@ -29,11 +29,11 @@ class Nav extends Component {
         )}
       </div>
     ) : (
-      <div>
+      <div className="btn-toolbar">
 
-        <Link to="/register" className="btn btn--login btn--nav">Register</Link>
+        <Link to="/register" className="btn btn-secondary">Register</Link>
 
-        <Link to="/login" className="btn btn-primary">Login</Link>
+        <Link to="/login" className="btn btn-secondary">Login</Link>
 
       </div>
     );

@@ -77,7 +77,7 @@ class LoginForm extends Component {
         </fieldset>
 
         <div className="form-group">
-          <input id="formButton" className={styles.btn} type="submit" placeholder="Log In" />
+          <button id="formButton" className={styles.btn} type="submit">Log In</button>
         </div>
       </form>
     );

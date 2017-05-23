@@ -78,7 +78,7 @@ class RegisterForm extends Component {
         </fieldset>
 
         <div className="form-group">
-          <input id="formButton" className={styles.btn} type="submit" placeholder="Send message" />
+          <button id="formButton" className={styles.btn} type="submit">Register</button>
         </div>
       </form>
     );
