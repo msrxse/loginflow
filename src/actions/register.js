@@ -26,6 +26,7 @@ function setAuthState(newState) {
  * @param  {string} username The username of the user to be logged in
  * @param  {string} password The password of the user to be logged in
  */
-export function register(username, password) {
-  console.log('register function called in register action creator file');
+export function register(formData) {
+  const { username, formEmail } = formData;
+  console.log(formEmail, 'register function called in register action creator file');
 }

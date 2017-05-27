@@ -3,7 +3,7 @@
  *
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import FormLabel from './FormLabel';
 import styles from './form.scss';
 
@@ -35,7 +35,7 @@ class RegisterForm extends Component {
     // }
 
 // Dispatch action SET_AUTH
-    this.props.registerUser();
+    this.props.registerUser(formData);
 
 //  Clear form
     this.setState({
@@ -84,5 +84,13 @@ class RegisterForm extends Component {
     );
   }
 }
+
+RegisterForm.propTypes = {
+  registerUser: PropTypes.func,
+};
+
+RegisterForm.defaultProps = {
+  registerUser: false,
+};
 
 export default RegisterForm;
