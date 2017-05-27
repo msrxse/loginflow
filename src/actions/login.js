@@ -27,8 +27,9 @@ function setAuthState(newState) {
  * @param  {string} username The username of the user to be logged in
  * @param  {string} password The password of the user to be logged in
  */
-export function login(username, password) {
-  console.log('login function called in login action creator');
+export function login(formData) {
+  const { formUsername, formPassword } = formData;
+  console.log(formUsername, 'login function called in login action creator');
   // return (dispatch) => {
   //   // If no username or password was specified, throw a field-missing error
   //   if (anyElementsEmpty({ username, password })) {

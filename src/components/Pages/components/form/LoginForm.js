@@ -3,7 +3,7 @@
  *
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import FormLabel from './FormLabel';
 import styles from './form.scss';
 
@@ -30,12 +30,12 @@ class LoginForm extends Component {
       formPassword: this.state.password,
     };
 
-    if (formData.formUsername.length < 1 || formData.formPassword.length < 1) {
-      return false;
-    }
+    // if (formData.formUsername.length < 1 || formData.formPassword.length < 1) {
+    //   return false;
+    // }
 
 // Dispatch action SET_AUTHs
-    this.props.loginUser();
+    this.props.loginUser(formData);
 //  Then, Clear form
     this.setState({
       username: '',
@@ -83,5 +83,13 @@ class LoginForm extends Component {
     );
   }
 }
+
+LoginForm.propTypes = {
+  loginUser: PropTypes.func,
+};
+
+LoginForm.defaultProps = {
+  loginUser: false,
+};
 
 export default LoginForm;
