@@ -27,6 +27,14 @@ function setAuthState(newState) {
  * @param  {string} password The password of the user to be logged in
  */
 export function register(formData) {
-  const { username, formEmail } = formData;
-  console.log(formEmail, 'register function called in register action creator file');
+  const { formUsername, formPassword } = formData;
+  // console.log(formEmail, 'register function called in register action creator file');
+  return (dispatch) => {
+    // If no username or password was specified, throw a field-missing error
+    if (anyElementsEmpty({ formUsername, formPassword })) {
+      console.log('Field missing found', 'Validation continues signaling failures on Form!');
+    }
+    const success = true; /* Simulates we obtain a successfull loggin of an user */
+    dispatch(setAuthState(success));
+  };
 }

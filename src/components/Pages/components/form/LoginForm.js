@@ -12,8 +12,8 @@ class LoginForm extends Component {
     super();
 
     this.state = {
-      username: '',
-      password: '',
+      username: 'admin',
+      password: '*****',
     };
   }
 

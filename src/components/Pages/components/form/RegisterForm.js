@@ -12,8 +12,8 @@ class RegisterForm extends Component {
     super();
 
     this.state = {
-      name: '',
-      email: '',
+      name: 'admin',
+      email: 'admin@example.com',
     };
   }
 

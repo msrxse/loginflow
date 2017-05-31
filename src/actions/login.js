@@ -29,13 +29,13 @@ function setAuthState(newState) {
  */
 export function login(formData) {
   const { formUsername, formPassword } = formData;
-  console.log(formUsername, 'login function called in login action creator');
-  // return (dispatch) => {
-  //   // If no username or password was specified, throw a field-missing error
-  //   if (anyElementsEmpty({ username, password })) {
-  //     console.log('Field missing found', 'Validation continues signaling failures on Form!');
-  //   }
-  //   const success = true; /* Simulates we obtain a successfull loggin of an user */
-  //   dispatch(setAuthState(success));
-  // };
+  // console.log(formUsername, 'login function called in login action creator');
+  return (dispatch) => {
+    // If no username or password was specified, throw a field-missing error
+    if (anyElementsEmpty({ formUsername, formPassword })) {
+      console.log('Field missing found', 'Validation continues signaling failures on Form!');
+    }
+    const success = true; /* Simulates we obtain a successfull loggin of an user */
+    dispatch(setAuthState(success));
+  };
 }

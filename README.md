@@ -16,6 +16,7 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 - - - -
 
 ## Latest TASKS!
+- [] TODO n12:
 - [x] TODO n11: Refactor styles on buttons.
 - [x] TODO n10: Sending login form triggers action.
 - [x] TODO n9: Sending register form triggers action.
