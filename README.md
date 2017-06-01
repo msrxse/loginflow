@@ -16,7 +16,8 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 - - - -
 
 ## Latest TASKS!
-- [] TODO n13: Loggin out sets logginIn=true.
+- [] TODO n14: Loggin out sets logginIn=true.
+- [x] TODO n13: Router redirects users to HomePage after LoggIn/Register.
 - [x] TODO n12: Login/Registers sets logginIn=true.
 - [x] TODO n11: Refactor styles on buttons.
 - [x] TODO n10: Sending login form triggers action.

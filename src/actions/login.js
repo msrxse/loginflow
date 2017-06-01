@@ -1,3 +1,4 @@
+import { browserHistory } from 'react-router';
 import * as actionTypes from '../constants/actionTypes';
 
 /**
@@ -37,5 +38,11 @@ export function login(formData) {
     }
     const success = true; /* Simulates we obtain a successfull loggin of an user */
     dispatch(setAuthState(success));
+    if (success === true) {
+      // If the login worked, forward the user to the dashboard
+      browserHistory.push('/');
+    } else {
+      console.log('Error presented in register form ');
+    }
   };
 }
