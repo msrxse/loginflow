@@ -24,6 +24,14 @@ function setAuthState(newState) {
 }
 
 /**
+ * Logs an user out
+ */
+export function logout() {
+  const success = false; /* Simulates we obtain a successfull logg out of an user */
+  return { type: actionTypes.SET_LOGOUT, success };
+}
+
+/**
  * Logs an user in
  * @param  {string} username The username of the user to be logged in
  * @param  {string} password The password of the user to be logged in

@@ -1,9 +1,10 @@
 import { setTracks } from './track';
 import { register } from './register';
-import { login } from './login';
+import { login, logout } from './login';
 
 export {
   setTracks,
   register,
   login,
+  logout,
 };

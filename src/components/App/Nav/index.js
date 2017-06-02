@@ -7,15 +7,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
-// import { logout } from '../actions/AppActions';
 import LoadingButton from '../../Pages/components/LoadingButton';
+import * as registerActions from '../../../actions/login';
 import styles from './nav.css';
 
 class Nav extends Component {
-  // logout() {
-  //   this.props.dispatch(logout());
-  // }
   render() {
     // Render either the Log In and register buttons, or the logout button
     // based on the current authentication state.
@@ -25,7 +23,7 @@ class Nav extends Component {
         {this.props.currentlySending ? (
           <LoadingButton className="btn--nav" />
         ) : (
-          <button className="btn btn-default" onClick={this.logout}>Logout</button>
+          <button className="btn btn-default" onClick={this.props.logoutUser}>Logout</button>
         )}
       </div>
     ) : (
@@ -55,13 +53,21 @@ class Nav extends Component {
 
 Nav.propTypes = {
   loggedIn: PropTypes.bool,
+  logoutUser: PropTypes.func,
   currentlySending: PropTypes.bool,
 };
 
 Nav.defaultProps = {
   loggedIn: false,
+  logoutUser: false,
   currentlySending: false,
 };
+
+function mapDispatchToProps(dispatch) {
+  return {
+    logoutUser: bindActionCreators(registerActions.logout, dispatch),
+  };
+}
 
 function mapStateToProps(state) {
   const { loggedIn } = state.data;
@@ -70,4 +76,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Nav);
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);
