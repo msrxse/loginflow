@@ -18,13 +18,9 @@ class Nav extends Component {
     // Render either the Log In and register buttons, or the logout button
     // based on the current authentication state.
     const navButtons = this.props.loggedIn ? (
-      <div>
-        <Link to="/dashboard" className="btn btn--dash btn--nav">Dashboard</Link>
-        {this.props.currentlySending ? (
-          <LoadingButton className="btn--nav" />
-        ) : (
-          <button className="btn btn-default" onClick={this.props.logoutUser}>Logout</button>
-        )}
+      <div className="btn-toolbar">
+        <Link to="/dashboard" className="btn btn-secondary">Dashboard</Link>
+        <Link className="btn btn-secondary" onClick={this.props.logoutUser}>Logout</Link>
       </div>
     ) : (
       <div className="btn-toolbar">

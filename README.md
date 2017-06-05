@@ -17,7 +17,9 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 
 ## Latest TASKS!
 
-- [] TODO n15: Router redirects users to protected page called DashBoard after LoggIn/Register.
+- [] TODO n17: Make a better representation of the LoggIn state that persist a browser refrest.
+- [] TODO n16: Router redirects users to protected page called DashBoard after LoggIn/Register.
+- [] TODO n15: Refactor DashBoard/Loggout buttons.
 - [x] TODO n14: Loggin out sets logginIn=false.
 - [x] TODO n13: Router redirects users to HomePage after LoggIn/Register.
 - [x] TODO n12: Login/Registers sets logginIn=true.
