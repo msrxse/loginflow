@@ -17,7 +17,8 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 
 ## Latest TASKS!
 
-- [] TODO n19: Make a better representation of the LoggIn state that persist a browser refrest.
+- [] TODO n20: Make a better representation of the LoggIn state that persist a browser refrest.
+- [] TODO n19: Make Dashboard a protected page, accessible only by logged in users.
 - [] TODO n18: When on Dashboard, nav changes Register/Login buttons for a loggout button.
 - [x] TODO n17: Setup testing environment: Jest and Enzyme.
 - [x] TODO n16: Users have access to protected page called DashBoard after LoggIn/Register.
