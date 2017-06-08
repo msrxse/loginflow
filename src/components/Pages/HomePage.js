@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import styles from './styles.css';
 
@@ -15,6 +16,16 @@ function HomePage({ tracks = [], data }) {
       ) : (
         <h1>Welcome to Login Flow!</h1>
       )}
+      <p>Shortly registered users will be saved to localStorage, so they will persist across page reloads.</p>
+      {loggedIn ? (
+        <Link to="/dashboard" className="btn btn-secondary">Dashboard</Link>
+      ) : (
+        <div>
+          <Link to="/login" className="btn btn-secondary">Login</Link>
+          <Link to="/register" className="btn btn-secondary">Register</Link>
+        </div>
+      )}
+
       <div className={styles.main}>
         { /* eslint-disable react/no-array-index-key */
           tracks.map((track, key) => <div className="track" key={key}>{track.title}</div>)

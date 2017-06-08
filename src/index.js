@@ -10,6 +10,7 @@ import App from './components/App';
 import HomePage from './components/Pages/HomePage';
 import RegisterPage from './components/Pages/RegisterPage';
 import LoginPage from './components/Pages/LoginPage';
+import Dashboard from './components/Pages/Dashboard';
 
 const tracks = [
   {
@@ -33,6 +34,7 @@ ReactDOM.render(
         <Route path="/" component={HomePage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/dashboard" component={Dashboard} />
       </Route>
     </Router>
   </Provider>,
