@@ -90,7 +90,7 @@ LoginForm.propTypes = {
 };
 
 LoginForm.defaultProps = {
-  loginUser: false,
+  loginUser: (loggedIn = false) => loggedIn,
 };
 
 export default LoginForm;
