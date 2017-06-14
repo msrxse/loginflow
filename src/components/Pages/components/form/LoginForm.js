@@ -46,7 +46,7 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <form className={styles.reactForm} onSubmit={this.handleSubmit}>
+      <form className={styles.reactForm} onSubmit={() => this.handleSubmit()}>
         <h1>Login Form</h1>
 
         <fieldset className="form-group">
