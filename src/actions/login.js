@@ -7,12 +7,17 @@ import * as actionTypes from '../constants/actionTypes';
  * @return {boolean}         True if there are empty elements, false if there aren't
  */
 function anyElementsEmpty(elements) {
-  for (const element in elements) {
-    if (!elements[element]) {
+  // for (const element in elements) {
+  //   if (!elements[element]) {
+  //     return true;
+  //   }
+  // }
+  Object.keys(elements).forEach((key) => {
+    if (!elements[key]) {
       return true;
     }
-  }
-  return false;
+    return false;
+  });
 }
 
 /**

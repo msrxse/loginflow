@@ -17,9 +17,10 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 
 ## Latest TASKS!
 
-- [] TODO n21: Make a better representation of the LoggIn state that persist a browser refrest.
-- [] TODO n20: Make Dashboard a protected page, accessible only by logged in users.
-- [] TODO n19: Test loginForm component.See https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md and https://www.sitepoint.com/test-react-components-jest/
+- [] TODO n22: Make a better representation of the LoggIn state that persist a browser refrest.
+- [] TODO n21: Make Dashboard a protected page, accessible only by logged in users.
+- [x] TODO n20: Refactor fixing errors.
+- [x] TODO n19: Test submit in loginForm component.
 - [x] TODO n18: Test the register reducer.
 - [x] TODO n17: Setup testing environment: Jest and Enzyme.
 - [x] TODO n16: Users have access to protected page called DashBoard after LoggIn/Register.

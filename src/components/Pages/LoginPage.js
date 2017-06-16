@@ -5,25 +5,19 @@
  * Route: /login
  *
  */
-
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Form from './components/form/LoginForm';
 import * as loginActions from '../../actions/login';
 
-class LoginPage extends Component {
-  render() {
-    return (
-      <div>
-        <Form
-          loginUser={this.props.loginUser}
-        />
-      </div>
-    );
-  }
-}
+const LoginPage = ({ loginUser }) =>
+  <div>
+    <Form
+      loginUser={loginUser}
+    />
+  </div>;
 
 LoginPage.propTypes = {
   loginUser: PropTypes.func,

@@ -9,7 +9,7 @@ describe('loginform', () => {
     mount(<LoginForm />);
   });
 
-  it('should call onSubmit when click submit', () => {
+  it('should call handler when form is sended', () => {
     const onSubmit = jest.fn();
     const wrapper = shallow(
       <LoginForm onSubmit={onSubmit} />,

@@ -5,25 +5,19 @@
  * Route: /register
  *
  */
-
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as registerActions from '../../actions/register';
 import Form from './components/form/RegisterForm';
 
-class RegisterPage extends Component {
-  render() {
-    return (
-      <div>
-        <Form
-          registerUser={this.props.registerUser}
-        />
-      </div>
-    );
-  }
-}
+const RegisterPage = ({ registerUser }) =>
+  <div>
+    <Form
+      registerUser={registerUser}
+    />
+  </div>;
 
 RegisterPage.propTypes = {
   registerUser: PropTypes.func,

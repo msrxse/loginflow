@@ -3,16 +3,11 @@
  *
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class FormLabel extends Component {
-  render() {
-    return (
-      <label htmlFor={this.props.htmlFor}>{this.props.title}</label>
-    );
-  }
-}
+const FormLabel = ({ title, htmlFor }) =>
+  <label htmlFor={htmlFor}>{title}</label>;
 
 FormLabel.propTypes = {
   title: PropTypes.string,
