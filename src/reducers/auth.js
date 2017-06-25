@@ -1,4 +1,5 @@
 import * as actionTypes from '../constants/actionTypes';
+import auth from '../utils/auth';
 
 // The initial application state
 const initialState = {
@@ -7,7 +8,8 @@ const initialState = {
     password: '',
   },
   currentlySending: false,
-  loggedIn: false,
+  loggedIn: auth.loggedIn(),
+  errorMessage: '',
 };
 
 function setAuth(state, action) {
