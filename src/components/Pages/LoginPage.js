@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Form from './components/form/LoginForm';
-import * as loginActions from '../../actions/login';
+import * as loginActions from '../../actions/auth';
 
 const LoginPage = ({ loginUser }) =>
   <div>

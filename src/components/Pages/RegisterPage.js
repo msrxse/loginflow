@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as registerActions from '../../actions/register';
+import * as registerActions from '../../actions/auth';
 import Form from './components/form/RegisterForm';
 
 const RegisterPage = ({ registerUser }) =>

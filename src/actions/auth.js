@@ -59,3 +59,27 @@ export function login(formData) {
     }
   };
 }
+
+/**
+ * Registers User
+ * @param  {string} username The username of the user to be logged in
+ * @param  {string} password The password of the user to be logged in
+ */
+export function register(formData) {
+  const { formUsername, formPassword } = formData;
+  // console.log(formEmail, 'register function called in register action creator file');
+  return (dispatch) => {
+    // If no username or password was specified, throw a field-missing error
+    if (anyElementsEmpty({ formUsername, formPassword })) {
+      console.log('Field missing found', 'Validation continues signaling failures on Form!');
+    }
+    const success = true; /* Simulates we obtain a successfull loggin of an user */
+    dispatch(setAuthState(success));
+    if (success === true) {
+      // If the login worked, forward the user to the dashboard
+      browserHistory.push('/');
+    } else {
+      console.log('Error presented in login form ');
+    }
+  };
+}

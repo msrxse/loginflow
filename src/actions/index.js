@@ -1,6 +1,5 @@
 import { setTracks } from './track';
-import { register } from './register';
-import { login, logout } from './login';
+import { login, register, logout } from './auth';
 
 export {
   setTracks,

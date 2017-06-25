@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 // import LoadingButton from '../../Pages/components/LoadingButton';
-import * as registerActions from '../../../actions/login';
+import * as registerActions from '../../../actions/auth';
 import styles from './nav.css';
 
 const Nav = ({ loggedIn, logoutUser }) => {
