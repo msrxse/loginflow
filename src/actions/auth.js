@@ -92,9 +92,3 @@ export function register(formData) {
 export function sendingRequest(sending) {
   return { type: actionTypes.SENDING_REQUEST, sending };
 }
-
-/*
-In case of error in form use
-dispatch({ type: SET_ERROR_MESSAGE, message });
-when convenient
-*/
