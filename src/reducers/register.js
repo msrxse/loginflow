@@ -21,8 +21,6 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case actionTypes.SET_AUTH:
       return setAuth(state, action);
-    case actionTypes.SET_LOGOUT:
-      return setAuth(state, action);
     default:
       return state;
   }
