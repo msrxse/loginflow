@@ -17,8 +17,8 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 
 ## Latest TASKS!
 
-- [] TODO n22: Make a better representation of the LoggIn state that persist a browser refrest.
-- [] TODO n21: Make Dashboard a protected page, accessible only by logged in users.
+
+- [] TODO n21: Make a better representation of the LoggIn state that persist a browser refresh.
 - [x] TODO n20: Refactor fixing errors.
 - [x] TODO n19: Test submit in loginForm component.
 - [x] TODO n18: Test the register reducer.

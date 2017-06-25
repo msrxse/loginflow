@@ -23,6 +23,16 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case actionTypes.SET_AUTH:
       return setAuth(state, action);
+      // break;
+    case actionTypes.SENDING_REQUEST:
+      return Object.assign({}, state, {
+        currentlySending: action.sending,
+      });
+      // break;
+    case actionTypes.SET_ERROR_MESSAGE:
+      return Object.assign({}, state, {
+        errorMessage: action.message,
+      });
     default:
       return state;
   }

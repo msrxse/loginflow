@@ -83,3 +83,13 @@ export function register(formData) {
     }
   };
 }
+
+/**
+ * Sets the requestSending state, which displays a loading indicator during requests
+ * @param  {boolean} sending The new state the app should have
+ * @return {object}          Formatted action for the reducer to handle
+ */
+export function sendingRequest(sending) {
+  return { type: actionTypes.SENDING_REQUEST, sending };
+}
+
