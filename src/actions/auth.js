@@ -2,6 +2,15 @@ import { browserHistory } from 'react-router';
 import * as actionTypes from '../constants/actionTypes';
 
 /**
+ * Sets the requestSending state, which displays a loading indicator during requests
+ * @param  {boolean} sending The new state the app should have
+ * @return {object}          Formatted action for the reducer to handle
+ */
+export function sendingRequest(sending) {
+  return { type: actionTypes.SENDING_REQUEST, sending };
+}
+
+/**
  * Checks if any elements of a JSON object are empty
  * @param  {object} elements The object that should be checked
  * @return {boolean}         True if there are empty elements, false if there aren't
@@ -45,10 +54,14 @@ export function login(formData) {
   const { formUsername, formPassword } = formData;
   // console.log(formUsername, 'login function called in login action creator');
   return (dispatch) => {
+    // Show the loading indicator, hide the last error
+    dispatch(sendingRequest(true));
     // If no username or password was specified, throw a field-missing error
     if (anyElementsEmpty({ formUsername, formPassword })) {
       console.log('Field missing found', 'Validation continues signaling failures on Form!');
     }
+    // When the request is finished, hide the loading indicator
+    dispatch(sendingRequest(false));
     const success = true; /* Simulates we obtain a successfull loggin of an user */
     dispatch(setAuthState(success));
     if (success === true) {
@@ -82,13 +95,4 @@ export function register(formData) {
       console.log('Error presented in login form ');
     }
   };
-}
-
-/**
- * Sets the requestSending state, which displays a loading indicator during requests
- * @param  {boolean} sending The new state the app should have
- * @return {object}          Formatted action for the reducer to handle
- */
-export function sendingRequest(sending) {
-  return { type: actionTypes.SENDING_REQUEST, sending };
 }

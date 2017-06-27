@@ -6,6 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FormLabel from './FormLabel';
+import LoadingButton from '../LoadingButton';
 import styles from './form.scss';
 
 class LoginForm extends Component {
@@ -78,7 +79,11 @@ class LoginForm extends Component {
         </fieldset>
 
         <div className="form-group">
-          <button id="formButton" className={styles.btn} type="submit">Log In</button>
+          {this.props.currentlySending ? (
+            <LoadingButton />
+            ) : (
+              <button id="formButton" className={styles.btn} type="submit">Log In</button>
+          )}
         </div>
       </form>
     );
@@ -87,10 +92,12 @@ class LoginForm extends Component {
 
 LoginForm.propTypes = {
   loginUser: PropTypes.func,
+  currentlySending: PropTypes.bool,
 };
 
 LoginForm.defaultProps = {
   loginUser: (loggedIn = false) => loggedIn,
+  currentlySending: false,
 };
 
 export default LoginForm;

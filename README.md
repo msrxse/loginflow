@@ -21,7 +21,9 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 ## Latest TASKS!
 
 
-- [] TODO n21: Make a better representation of the LoggIn state that persist a browser refresh.
+- [] TODO n23: Make a better representation of the LoggIn state that persist a browser refresh.
+- [] TODO n22: If no username or password was specified, throw a field-missing error.
+- [x] TODO n21: Displays a loading indicator during requests (when clicking Login button).(missing simulation of network latency so it can be seen)
 - [x] TODO n20: Refactor fixing errors.
 - [x] TODO n19: Test submit in loginForm component.
 - [x] TODO n18: Test the register reducer.

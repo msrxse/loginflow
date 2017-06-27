@@ -6,17 +6,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LoadingIndicator from './LoadingIndicator';
+import styles from './form/form.scss';
 
 function LoadingButton(props) {
   return (
-    <button className={`${props.className} btn btn--loading`} disabled="true">
+    <button className={`${props.className} ${styles.btn} btn`} disabled="true">
       <LoadingIndicator />
     </button>
   );
 }
 
 LoadingButton.propTypes = {
-  className: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 LoadingButton.defaultProps = {

@@ -12,19 +12,22 @@ import { bindActionCreators } from 'redux';
 import Form from './components/form/LoginForm';
 import * as loginActions from '../../actions/auth';
 
-const LoginPage = ({ loginUser }) =>
+const LoginPage = ({ loginUser, currentlySending }) =>
   <div>
     <Form
       loginUser={loginUser}
+      currentlySending={currentlySending}
     />
   </div>;
 
 LoginPage.propTypes = {
   loginUser: PropTypes.func,
+  currentlySending: PropTypes.bool,
 };
 
 LoginPage.defaultProps = {
   loginUser: false,
+  currentlySending: false,
 };
 
 function mapDispatchToProps(dispatch) {
@@ -36,7 +39,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   const { formState, currentlySending } = state.data;
   return {
-    formState,
+    formState,  // This is using redux but i am using compoonent state
     currentlySending,
   };
 }
