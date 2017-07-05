@@ -4,9 +4,9 @@ import styles from '../App.css';
 const Footer = () =>
   <footer className={styles.info}>
     <ul>
-      <li>App description here</li>
-      <li>App Name here</li>
-      <li>Code in <a href="https://github.com/jmarcosuarez/minimal-react-boilerplate">github</a></li>
+      <li>React based register/login workflow</li>
+      <li>Login Flow</li>
+      <li>Code in <a href="https://github.com/jmarcosuarez/loginflow">github</a></li>
     </ul>
   </footer>;
 
