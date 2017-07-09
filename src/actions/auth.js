@@ -1,5 +1,6 @@
 import { browserHistory } from 'react-router';
 import * as actionTypes from '../constants/actionTypes';
+import auth from '../utils/auth';
 
 /**
  * Sets the requestSending state, which displays a loading indicator during requests
@@ -60,16 +61,21 @@ export function login(formData) {
     if (anyElementsEmpty({ formUsername, formPassword })) {
       console.log('Field missing found', 'Validation continues signaling failures on Form!');
     }
-    // When the request is finished, hide the loading indicator
-    dispatch(sendingRequest(false));
-    const success = true; /* Simulates we obtain a successfull loggin of an user */
-    dispatch(setAuthState(success));
-    if (success === true) {
-      // If the login worked, forward the user to the dashboard
-      browserHistory.push('/');
-    } else {
-      console.log('Error presented in register form ');
-    }
+    // Generate salt for password encryption
+    // Encrypt password
+    const hash = formPassword; // not implemented yet
+    // Use auth.js to fake a request
+    auth.login(formUsername, hash, (success, err) => {
+      // When the request is finished, hide the loading indicator
+      dispatch(sendingRequest(false));
+      dispatch(setAuthState(success));
+      if (success === true) {
+        // If the login worked, forward the user to the dashboard and clear the form
+        browserHistory.push('/');
+      } else {
+        console.log('Error presented in register form: ', err);
+      }
+    });
   };
 }
 
