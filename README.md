@@ -18,32 +18,10 @@ Execute `npm start` to run the development server on **[http://localhost:8080](h
 
 - - - -
 
-## Latest TASKS!
+## ABOUT
 
+This application demonstrates what a React.js based register/login workflow might look like on the Frontend. I used my react-boilerplate as a starting point — the app thus uses Redux, PostCSS and react-router.
 
-- [] TODO n23: Make a better representation of the LoggIn state that persist a browser refresh.
-- [] TODO n22: If no username or password was specified, throw a field-missing error.
-- [x] TODO n21: Displays a loading indicator during requests (when clicking Login button).(missing simulation of network latency so it can be seen)
-- [x] TODO n20: Refactor fixing errors.
-- [x] TODO n19: Test submit in loginForm component.
-- [x] TODO n18: Test the register reducer.
-- [x] TODO n17: Setup testing environment: Jest and Enzyme.
-- [x] TODO n16: Users have access to protected page called DashBoard after LoggIn/Register.
-- [x] TODO n15: Refactor DashBoard/Loggout buttons.
-- [x] TODO n14: Loggin out sets logginIn=false.
-- [x] TODO n13: Router redirects users to HomePage after LoggIn/Register.
-- [x] TODO n12: Login/Registers sets logginIn=true.
-- [x] TODO n11: Refactor styles on buttons.
-- [x] TODO n10: Sending login form triggers action.
-- [x] TODO n9: Sending register form triggers action.
-- [x] TODO n8: Change forms to use controlled form fields.
-- [x] TODO n7: Implement views for RegisterPage.
-- [x] TODO n6: Move scss files to its own folder.
-- [x] TODO n5: FIX: SyntaxError: Missing class properties transform. I need to use arrow functions within the body of classes. Note that babel-plugin-transform-class-properties is installed. Just need to figure out how to add "plugins": ["transform-class-properties"] within webpack2.
-- [x] TODO n4: Implement views for LoginPage.
-- [x] TODO n3: Set styles on the Navigation menu.
-- [x] TODO n2: Hook this.props.loggedIn in store so clicking login button sets this variable true. This is the previous step that will permit toggling whats seen on the views depending on loggin status.
-- [x] TODO n1: First we are going to do is create a Navigation bar on top, functionality would be different for login and not logged in users. Nav files inside Header folder and Stream folder becomes Pages, where all views of the app will be implemented.
 
 - - - -
 
