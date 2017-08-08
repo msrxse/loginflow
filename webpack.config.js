@@ -1,25 +1,11 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
-
-const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './src/index.js',
-  ],
-  plugins: [
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        eslint: {
-          configFile: path.join(__dirname, './.eslintrc'),
-        },
-        postcss: () => {
-          return [autoprefixer];
-        },
-      },
-    }),
   ],
 
   module: {
@@ -56,7 +42,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, './dist'),
     publicPath: '/',
     filename: 'bundle.js',
   },
