@@ -27,11 +27,20 @@ module.exports = {
         }],
       },
       {
-        test: /\.s?css$/,
-        loaders: [
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
-          'sass-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       // Loaders for other file types can go here
@@ -43,7 +52,6 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    publicPath: '/',
     filename: 'bundle.js',
   },
   devServer: {

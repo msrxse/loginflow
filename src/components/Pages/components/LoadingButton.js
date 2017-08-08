@@ -6,7 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LoadingIndicator from './LoadingIndicator';
-import styles from './form/form.scss';
+import styles from './form/form.css';
 
 function LoadingButton(props) {
   return (

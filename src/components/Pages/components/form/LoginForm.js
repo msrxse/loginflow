@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FormLabel from './FormLabel';
 import LoadingButton from '../LoadingButton';
-import styles from './form.scss';
+import styles from './form.css';
 
 class LoginForm extends Component {
   constructor() {
