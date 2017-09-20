@@ -1,13 +1,13 @@
 @import '../../../../styles/custom.css';
 
 form {
- padding: remy(32px);
+ padding:  2rem;
  margin-top: 2rem;
  margin-right: auto;
  margin-left: auto;
- max-width: remy(380px);
+ max-width: 24rem;
  background-color: #fff;
- border-radius: $radius;
+ border-radius: var(--radius);
  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
 }
 
@@ -51,12 +51,12 @@ textarea {
  border-right: 0;
  border-bottom: 1px solid $color-grey;
  border-left: 0;
- border-radius: $radius;
+ border-radius: var(--radius);
  @include transition;
  
  &:focus {
   outline: 0;
-  border-bottom-color: $color-primary;
+  border-bottom-color: var(--color-primary);
  }
 }
 
@@ -74,7 +74,7 @@ textarea {
  color: #fff;
  vertical-align: middle;
  white-space: nowrap;
- background-color: $color-primary;
+ background-color: var(--color-primary);
  border: 1px solid transparent;
  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
  cursor: pointer;
