@@ -3,6 +3,6 @@
   **/
 module.exports = {
   plugins: [
-    require('autoprefixer'),
+    'postcss-import': {},
   ],
 };
