@@ -43,6 +43,8 @@ function setAuthState(newState) {
  */
 export function logout() {
   const success = false; /* Simulates we obtain a successfull logg out of an user */
+  /* Delete cookie from local storage */
+  localStorage.removeItem('token'); /* eslint no-undef: 0*/
   return { type: actionTypes.SET_AUTH, success };
 }
 
