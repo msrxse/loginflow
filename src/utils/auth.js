@@ -9,7 +9,7 @@ const auth = {
     }
     // Post a fake request (see below)
     request.post('/login', { username, password }, (response) => {
-      // If the user was authenticated successfully, save a random token to the localStorage
+      // If the user was authenticated successfully, save token to localStorage
       if (response.authenticated) {
         localStorage.token = response.token;
         callback(true);
