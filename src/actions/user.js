@@ -26,11 +26,7 @@ function getUserError(error) {
  * Retreiver currently logged in user
  */
 export default function getUserRequest(token) {
-  console.log('getUserRequest called with token: ', token);
-  return (dispatch, getState) => {
-    if (getState().user) {
-      return; // No need to fetch
-    }
+  return (dispatch) => {
     dispatch(getUser(token));
     /* eslint-disable consistent-return */
     return fetch('http://localhost:3001/api')
