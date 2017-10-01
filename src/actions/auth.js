@@ -1,5 +1,6 @@
 import { browserHistory } from 'react-router';
 import * as actionTypes from '../constants/actionTypes';
+import getUserRequest from './user';
 import auth from '../utils/auth';
 
 /**
@@ -72,6 +73,8 @@ export function login(formData) {
       dispatch(sendingRequest(false));
       dispatch(setAuthState(success));
       if (success === true) {
+        // Get user object on auth success
+        dispatch(getUserRequest(localStorage.getItem('token')));
         // If the login worked, forward the user to the dashboard and clear the form
         browserHistory.push('/');
       } else {

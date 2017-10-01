@@ -1,0 +1,12 @@
+{
+  "user": {
+    "isFetching": false,
+    "error": null,
+    "user": [
+      {
+        "id": 1,
+        "first_name": "Jeanette"
+      }
+    ]
+  }
+}
