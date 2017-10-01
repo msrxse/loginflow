@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 /**
@@ -9,20 +9,28 @@ import { connect } from 'react-redux';
  */
 export default function Authorization(allowedRoles) {
   return (WrappedComponent) => {
-    const WithAuthorization = () => {
-      const { user } = this.props;
+    const WithAuthorization = (props) => {
+      const { user } = props;
       if (allowedRoles.includes(user.account_type)) {
-        return <WrappedComponent {...this.props} />;
+        return <WrappedComponent {...props} />;
       }
       return <h1>No page for you!</h1>; // Redirect actually
     };
-    // function mapStateToProps(state) {
-    //   const { user } = state.data;
-    //   return {
-    //     user,
-    //   };
-    // }
-
-    return connect(state => ({ user: state.data.user }))(WithAuthorization);
+    function mapStateToProps(state) {
+      const { user } = state.user;
+      return {
+        user,
+      };
+    }
+    WithAuthorization.propTypes = {
+      user: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        first_name: PropTypes.string.isRequired,
+        account_type: PropTypes.string.isRequired,
+      },
+      ).isRequired,
+    };
+    // return connect(state => ({ user: state.user.user }))(WithAuthorization);
+    return connect(mapStateToProps)(WithAuthorization);
   };
 }

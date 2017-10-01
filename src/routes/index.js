@@ -4,8 +4,8 @@ import Authorization from './Authorization';
 import App from '../components/App';
 import { HomePage, RegisterPage, LoginPage, Dashboard } from '../components/Pages';
 
-// const User = Authorization(['user', 'manager', 'admin']);
-const Manager = Authorization(['manager', 'admin']);
+const User = Authorization(['user', 'manager', 'admin']);
+// const Manager = Authorization(['manager', 'admin']);
 // const Admin = Authorization(['admin']);
 
 export default function Routes() {
@@ -14,7 +14,7 @@ export default function Routes() {
       <IndexRoute component={HomePage} />
       <Route path="/register" component={RegisterPage} />
       <Route path="/login" component={LoginPage} />
-      <Route path="/dashboard" component={Manager(Dashboard)} />
+      <Route path="/dashboard" component={User(Dashboard)} />
     </Route>
   );
 }

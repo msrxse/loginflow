@@ -2,11 +2,11 @@
   "user": {
     "isFetching": false,
     "error": null,
-    "user": [
+    "user":
       {
         "id": 1,
-        "first_name": "Jeanette"
+        "first_name": "Jeanette",
+        "account_type": "user"
       }
-    ]
   }
 }
