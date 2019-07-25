@@ -1,7 +1,5 @@
 # Adding Login and Authentication Sections to a React app
-
-![alt tag](http://assets.fincaspace.com/img/loginflow-register.png)
-![alt tag](http://assets.fincaspace.com/img/loginflow-dashboard.png)
+## Warning! This project is very old at this point! Some of the ideas may be fine would not recommend you use it as a modern reference
 
 Boilerplate by
   - [jmarcosuarez/minimal-react-boilerplate](https://github.com/jmarcosuarez/minimal-react-boilerplate)
